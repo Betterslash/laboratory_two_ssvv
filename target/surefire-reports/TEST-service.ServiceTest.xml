@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="service.ServiceTest" time="0.256" tests="14" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="service.ServiceTest" time="0.247" tests="14" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\Dori\.jdks\openjdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\Dori\AppData\Local\Temp\surefire9533229890446679174\surefirebooter13658649320809080222.jar C:\Users\Dori\AppData\Local\Temp\surefire9533229890446679174 2022-03-28T20-45-34_805-jvmRun1 surefire460468873838327130tmp surefire_011418403174727670659tmp"/>
+    <property name="sun.java.command" value="C:\Users\Dori\AppData\Local\Temp\surefire9255585932484831212\surefirebooter15046489351743581693.jar C:\Users\Dori\AppData\Local\Temp\surefire9255585932484831212 2022-03-28T20-50-54_015-jvmRun1 surefire16965264553775629966tmp surefire_018044480040614704319tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\SSVV-Laboratory_two\target\test-classes;D:\SSVV-Laboratory_two\target\classes;C:\Users\Dori\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Dori\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Dori\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.2\junit-jupiter-5.8.2.jar;C:\Users\Dori\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\Dori\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Dori\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\Dori\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Dori\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\Dori\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\Dori\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Dori\AppData\Local\Temp\surefire9533229890446679174\surefirebooter13658649320809080222.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Dori\AppData\Local\Temp\surefire9255585932484831212\surefirebooter15046489351743581693.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17+35-2724"/>
@@ -57,18 +57,18 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="test_addStudent_withNull" classname="service.ServiceTest" time="0.056"/>
-  <testcase name="addStudent_groupNumberIsZero_isAdded" classname="service.ServiceTest" time="0.054"/>
-  <testcase name="addStudent_invalidStudentName_notAdded" classname="service.ServiceTest" time="0.011"/>
-  <testcase name="addStudent_groupNumberIsMinusOne_notAdded" classname="service.ServiceTest" time="0.012"/>
+  <testcase name="test_addStudent_withNull" classname="service.ServiceTest" time="0.053"/>
+  <testcase name="addStudent_groupNumberIsZero_isAdded" classname="service.ServiceTest" time="0.052"/>
+  <testcase name="addStudent_invalidStudentName_notAdded" classname="service.ServiceTest" time="0.01"/>
+  <testcase name="addStudent_groupNumberIsMinusOne_notAdded" classname="service.ServiceTest" time="0.008"/>
   <testcase name="addStudent_validStudentName_isAdded" classname="service.ServiceTest" time="0.013"/>
-  <testcase name="addStudent_validStudentGroup_isAdded" classname="service.ServiceTest" time="0.017"/>
-  <testcase name="addStudent_invalidStudentGroup_notAdded" classname="service.ServiceTest" time="0.009"/>
-  <testcase name="addStudent_invalidStudentId_notAdded" classname="service.ServiceTest" time="0.011"/>
-  <testcase name="addStudent_validStudentEmail_isAdded" classname="service.ServiceTest" time="0.01"/>
-  <testcase name="addAssignment_invalidAssignment" classname="service.ServiceTest" time="0.017"/>
-  <testcase name="addAssignment_validAssignment" classname="service.ServiceTest" time="0.011"/>
-  <testcase name="addStudent_invalidStudentEmail_notAdded" classname="service.ServiceTest" time="0.009"/>
-  <testcase name="addStudent_validStudentId_isAdded" classname="service.ServiceTest" time="0.007"/>
-  <testcase name="test_addStudent_withValidInput" classname="service.ServiceTest" time="0.009"/>
+  <testcase name="addStudent_validStudentGroup_isAdded" classname="service.ServiceTest" time="0.014"/>
+  <testcase name="addStudent_invalidStudentGroup_notAdded" classname="service.ServiceTest" time="0.01"/>
+  <testcase name="addStudent_invalidStudentId_notAdded" classname="service.ServiceTest" time="0.01"/>
+  <testcase name="addStudent_validStudentEmail_isAdded" classname="service.ServiceTest" time="0.008"/>
+  <testcase name="addAssignment_invalidAssignment" classname="service.ServiceTest" time="0.012"/>
+  <testcase name="addAssignment_validAssignment" classname="service.ServiceTest" time="0.009"/>
+  <testcase name="addStudent_invalidStudentEmail_notAdded" classname="service.ServiceTest" time="0.012"/>
+  <testcase name="addStudent_validStudentId_isAdded" classname="service.ServiceTest" time="0.011"/>
+  <testcase name="test_addStudent_withValidInput" classname="service.ServiceTest" time="0.015"/>
 </testsuite>
