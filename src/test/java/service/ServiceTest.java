@@ -2,8 +2,6 @@ package service;
 
 import domain.Student;
 import domain.Tema;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import repository.NotaXMLRepo;
 import repository.StudentXMLRepo;
@@ -13,8 +11,6 @@ import validation.NotaValidator;
 import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.ValidationException;
-
-import java.io.File;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -33,7 +29,6 @@ public class ServiceTest {
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
         this.service = new Service(studentXMLRepository, new StudentValidator(), temaXMLRepository, new TemaValidator(), notaXMLRepository, notaValidator);
-
     }
 
     ServiceTest() {
