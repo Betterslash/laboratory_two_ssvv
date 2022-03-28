@@ -23,6 +23,7 @@ public class ServiceTest {
     private Service service;
 
     void setUp(){
+        FileClearer.clearFiles();
         String filenameStudent = "src/test/resources/Studenti.xml";
         String filenameTema = "src/test/resources/Teme.xml";
         String filenameNota = "src/test/resources/Note.xml";
@@ -31,11 +32,12 @@ public class ServiceTest {
         TemaXMLRepo temaXMLRepository = new TemaXMLRepo(filenameTema);
         NotaValidator notaValidator = new NotaValidator(studentXMLRepository, temaXMLRepository);
         NotaXMLRepo notaXMLRepository = new NotaXMLRepo(filenameNota);
-        FileClearer.clearFiles();
         this.service = new Service(studentXMLRepository, new StudentValidator(), temaXMLRepository, new TemaValidator(), notaXMLRepository, notaValidator);
+
     }
 
     ServiceTest() {
+        setUp();
     }
 
 
