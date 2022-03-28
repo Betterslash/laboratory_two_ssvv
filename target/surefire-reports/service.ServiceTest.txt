@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: service.ServiceTest
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.339 s - in service.ServiceTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.325 s - in service.ServiceTest

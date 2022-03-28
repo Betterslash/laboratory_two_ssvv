@@ -39,12 +39,7 @@ public class ServiceTest {
     @Test
     public void test_addStudent_withNull() {
         setUp();
-        var exception = assertThrows(RuntimeException.class, () -> service.addStudent(null));
-
-        var expectedMessage = "Cannot invoke \"domain.Student.getID()\" because \"entity\" is null";
-        var actualMessage = exception.getMessage();
-
-        assertTrue(actualMessage.contains(expectedMessage));
+        assertThrows(RuntimeException.class, () -> service.addStudent(null));
         FileClearer.clearFiles();
     }
 
