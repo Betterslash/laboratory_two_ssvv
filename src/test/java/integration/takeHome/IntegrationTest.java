@@ -1,4 +1,4 @@
-package integration;
+package integration.takeHome;
 
 import domain.Nota;
 import domain.Student;
@@ -14,14 +14,13 @@ import utils.FileClearer;
 import validation.NotaValidator;
 import validation.StudentValidator;
 import validation.TemaValidator;
-import validation.ValidationException;
 
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class IntegrationTest {
-
     private Service service;
 
     @BeforeEach
@@ -48,28 +47,35 @@ public class IntegrationTest {
     }
 
     @Test
-    public void addStudent_validStudent_isAdded() {
-        Student student = new Student("123", "test", 100, "test@test.com");
+    public void addStudent_integration() {
+        addStudent();
+    }
+
+    @Test
+    public void addAssignment_integration() {
+        addStudent();
+        addAssignment();
+    }
+
+    @Test
+    public void addGrade_integration() {
+        addStudent();
+        addAssignment();
+        addGrade();
+    }
+
+    public void addStudent() {
+        Student student = new Student("123", "name", 100, "some@email.com");
         assertNull(service.addStudent(student));
     }
 
-    @Test
-    public void addAssignment_validAssignment_isAdded() {
-        assertNull(service.addTema(new Tema("123", "test", 1, 1)));
+    public void addAssignment() {
+        assertNull(service.addTema(new Tema("123", "abc", 1, 1)));
     }
 
-    @Test
-    public void addGrade_invalidGrade_throwsValidationException() {
-        assertThrows(ValidationException.class, () -> service.addNota(
-                new Nota("1", "", "", 10.0, LocalDate.now()), "test")
-        );
+    public void addGrade() {
+        service.addNota(new Nota("1","123","123",10.0, LocalDate.of(2022, 5, 3)),"asd");
+        assertEquals(10.0, service.addNota(new Nota("1","123","123",10.0, LocalDate.of(2022, 5, 3)),"asd"));
     }
 
-    @Test
-    public void testAll() {
-        service.addStudent(new Student("123", "test", 100, "test@test.com"));
-        service.addTema(new Tema("123", "test", 1, 1));
-        assertEquals(10, service.addNota(
-                new Nota("1", "123", "123", 10.0, LocalDate.now()), "test"));
-    }
 }
